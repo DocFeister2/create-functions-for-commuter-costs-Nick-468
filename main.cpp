@@ -17,19 +17,26 @@ double toCommutes(double gasDollars) {
   gasGallons = gasDollars / DOLLARS_PER_GALLON;
   gasMiles = gasGallons * MILES_PER_GALLON;
 
-  numCommutes = gasMiles; // TODO: That math is not right! Something is missing here...
+  numCommutes = gasMiles / MILES_PER_COMMUTE; // TODO: That math is not right! Something is missing here...
 
   return numCommutes;
 }
 
 // TODO!
 // Converts number of commutes into gas cost
-/*
 double toDollars(double commutes) {
-  ....
+  double gasMiles; //how many miles can be driven
+  double gasGallons; //how many gallons needed
+  double totalCost; //total cost for commute
+
+  gasMiles = commutes * MILES_PER_COMMUTE; //calculates number of miles 
+  
+  gasGallons = gasMiles / MILES_PER_GALLON; //calculates amount of gas needed for miles
+
+  totalCost = gasGallons * DOLLARS_PER_GALLON; //calculates total cost based off amount of gas needed for miles
+
   return totalCost;
 }
-*/
 
 int main() {
 
